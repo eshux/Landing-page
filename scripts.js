@@ -5,6 +5,7 @@ const menu = document.querySelector(".js-menu");
 const line = document.querySelectorAll(".js-menu__line");
 const header = document.querySelector('.header');
 const wrap = document.querySelector('.nav__wrapper');
+const login = document.querySelector('.header__login')
 
 let navToggle = 1;
 
@@ -15,14 +16,27 @@ menu.addEventListener('click', () => {
         header.classList.add('active');
         wrap.style.top = "0";
         menu.classList.add('active');
+        login.classList.add('active');
     } else {
         nav.classList.remove('active');
         line.forEach((i => i.classList.remove('active')));
         header.classList.remove('active');
         wrap.style.top = "-300";
         menu.classList.remove('active');
+        login.classList.remove('active');
     }
     navToggle *= -1;
+})
+
+nav.addEventListener('click', (event) => {
+  if (event.target === nav) {
+    nav.classList.remove('active');
+    line.forEach((i => i.classList.remove('active')));
+    header.classList.remove('active');
+    wrap.style.top = "-300";
+    menu.classList.remove('active');
+    login.classList.remove('active');
+  }
 })
 
 // navigation with anchor points
