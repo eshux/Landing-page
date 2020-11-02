@@ -160,7 +160,7 @@ body {
 .button--top {
     display: none;
     border: 1px solid #FFFFFF;
-    background-color: #181818;
+    background-color: rgba(24, 24, 24, 0.6);
     width: 30px;
     height: 30px;
     position: fixed;
@@ -542,6 +542,9 @@ body {
         border-radius: 0;
     }
 
+    .button--top {
+        right: 10px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
